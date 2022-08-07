@@ -40,8 +40,8 @@ by James Kwon Lee (v8.07.22)
             - Since some kind of pivot was chosen, it allowed for my list to sort properly--but the overall comparison count was inaccurate.
             - Because lists are mutable even when changes are made locally, I was, properly so, slicing the array
                 for each recursive call, but, I forgot to adjust the median index by an offset based on what section of the array was being partitioned.
-
-    4 - Recursion: The typical format of tail-recursion is a function returning the call to itself with some kind of change of value leading to a base case.
+    4 - Recursion: The typical format of tail-recursion is a function returning the call to itself 
+            with some kind of change of value leading to a base case.
             - Because lists are mutable, and since two sorting lists are to be run in parallel, I couldn't use this typical
                 format. I didn't copy Quick Sort from the publication, I wanted to figure it out myself, so figuring out how
                  exactly to format the recursion took a while for me to figure out.
