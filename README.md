@@ -14,7 +14,8 @@ by James Kwon Lee (v8.07.22)
             at each recursive step because it is either the lowest are highest element, leading to quadratic time.
         - But a pivot that is approximately the median value of the array will split the array approximately in half at each recursive step, 
             leading to log n performance.
-        - One of the best ways to pick the median pivot is by randomly sampling three numbers and assigning the median value from that group as the pivot.
+        - One of the best ways to pick the median pivot is by sampling three numbers and assigning the median value from that group as the pivot.
+        - An even better implementation is a random selection of the pivot that allows for high probabalistic chance of a close-to median pivot selection. 
 
 ## Psuedocode:
     1 - Pick an approximately median-value (middle 50%) pivot:
@@ -32,8 +33,9 @@ by James Kwon Lee (v8.07.22)
     1 - Implementing Quick Sort was easy because it was elegantly designed and explained by its creator.
     2 - What was hard though, was counting the number of comparisons, in Python.
             - With C or C++, I know that pointers could be used to update count via its reference across functions.
-                - But It took me a while to figure that out with Python--I thought merely returning the count from one function and inputting it
-                        as a parameter on another would do the trick, but doing this did not update the count properly.
+                - But It took me a while to figure that out with Python--I thought merely returning the count 
+                        from one function and inputting it as a parameter on another would do the trick, 
+                        but doing this did not update the count properly.
             - As a blanket statement, I learned that most data types pass by value in python, but . . .
                 - Certain data types like Lists (aka arrays) are mutable and behave as if passed by reference.
                 - https://realpython.com/python-pass-by-reference/
@@ -70,11 +72,13 @@ by James Kwon Lee (v8.07.22)
 
 
 ## SOLVED Comparisons:
-    FIRST ELEMENT AS PIVOT: 162085
+    (hidden on this page to avoid apparent spoilers!)
 
-    LAST ELEMENT AS PIVOT: 164123
+    FIRST ELEMENT AS PIVOT: ***
 
-    RANDOMIZED-MEDIAN PIVOT: 138382
+    LAST ELEMENT AS PIVOT: ***
+
+    RANDOMIZED-MEDIAN PIVOT: ***
 
 ## Conclusion:
     - As we can see from the results, a randomized pivot selection significantly reduces the number of comparisons made,
